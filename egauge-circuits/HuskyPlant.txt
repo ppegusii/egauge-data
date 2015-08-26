@@ -1,4 +1,0 @@
-solar    13537345557
-solar+    13557991667
-total usage    
-total generation    13537345557

@@ -1,7 +1,0 @@
-grid    2740090568
-solar    3478558878
-solar+    3565795378
-solar half    1736638445
-solar half+    1780013296
-total usage    4563478715
-total generation    3478558878
