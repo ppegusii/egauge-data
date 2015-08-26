@@ -1,0 +1,11 @@
+p 20ea lights conf    108245809
+p 20ea lights lobby    28567053
+p 20ea lights hallway    193333298
+p 20ea lights office    172658582
+p 20ea lights office space    194578356
+p 20ea lights office 2    127729696
+p 20ea hvac heat pump    -523546237
+p 20ea hvac exhaust fan    -6411271
+main electric east 20th fl    23181677427
+total usage    
+total generation    

@@ -1,0 +1,7 @@
+main feeders panel 17dbu    3730385611
+lights panel 17dbu    545375824
+plug loads panel 17dbu    2425048411
+ups panel 17dbu    2466121878
+exhaust fan panel 17 dbu    603440848
+total usage    9770372572
+total generation    

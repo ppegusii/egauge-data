@@ -1,0 +1,5 @@
+grid    3135275609
+solar    1380030065
+solar+    1385771156
+total usage    4521046765
+total generation    1380030065

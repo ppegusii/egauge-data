@@ -1,0 +1,3 @@
+solar    185420234791
+total usage    
+total generation    185420234791
