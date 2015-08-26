@@ -1,0 +1,8 @@
+grid    10900050661
+solar    4173373505
+solar+    4185396405
+solar 2    3521064359
+solar 2+    3529801528
+grid electric consumption    63851397056
+total usage    18615248595
+total generation    7694437865

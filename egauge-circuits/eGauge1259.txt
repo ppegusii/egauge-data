@@ -1,0 +1,7 @@
+grid
+solar
+a/c-lower
+pumps/shop
+a/c - upper
+total usage
+total generation

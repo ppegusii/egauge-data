@@ -1,0 +1,14 @@
+01-02-red edesur    4777005343
+03-04-p/solar    2554283823
+05-c/inversor    2271995569
+06-a/a d1    548151376
+07-a/a d2    120621784
+08-a/a d3    65341809
+09-a/a 501    744034828
+10-nevera    939944328
+11-lavadora    79947210
+12-plancha    121588772
+amp/solar l1    16010261504
+amp/solar l2    9160409412
+total usage    7331289166
+total generation    2554283823

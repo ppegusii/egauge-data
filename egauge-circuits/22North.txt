@@ -1,0 +1,13 @@
+grid    288717433
+pv array 1    1322102201
+pv array 1+    1343157813
+pv  array 2    -28143601175533
+pv  array 2+    3565018022
+fans + halls?    555449846
+east front hall    190015523
+west front hall    62036402
+recept east    3134995
+recept west    23857834
+12kbtu air conditioning    298564440
+total usage    -28141990355899
+total generation    -28142279073332
