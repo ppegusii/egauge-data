@@ -16,7 +16,7 @@ import array    	# Array module
 import json         # JSON module
 import ParsArgs     # Imports ParsArgs module
 
-class MetaData(object):												# Creates class object aselkfjls
+class MetaData(object):												# Creates format for MetaData objects
     def __init__(self, egauge_name, description, label):
         self.egauge_name = egauge_name
         self.description = description
@@ -25,7 +25,7 @@ class MetaData(object):												# Creates class object aselkfjls
 
 description_dict = {"Solar": ["solar", "panel", "photovoltaic", "array", "pv"],                        # Dict of keyphrases(the values) that match the desired label(the keys)
 	"Dishwasher": ["dish", "dishwasher"],
-	"Fridge": ["fridge", "refrigerator", "freeze", "cooler", "chiller", "mr. freeze", "ice", "rfgrtr"],
+	"Fridge": ["fridge", "refrigerator", "freeze", "cooler", "chiller", "mr. freeze", " ice", "rfgrtr"],
 	"Geothermal": ["geothermal", "geo", "condenser", "copper pipes"],
 	"Oven": ["oven", "kiln", "stove", "range", "roast"],
 	"Microwave": ["microwave", "toast"],
@@ -59,7 +59,8 @@ description_dict = {"Solar": ["solar", "panel", "photovoltaic", "array", "pv"], 
 	'Bedroom': ["bedroom", "girls rooms", "boys room", "kids room", "guest"],
 	'Stairs': ["upstairs", "downstairs", "stairs"],
 	'Studio': ["studio"],
-	"Wind": ["wind"]
+	"Wind": ["wind"],
+	"Office": ["office"]
 	}
 
 inv_dict = {value: key for key in description_dict for value in description_dict[key]}			# Inverses keys and values for the description_dict
@@ -79,9 +80,14 @@ def ExtractMetaData(csvfilename):																# ExtractMetaData function
 	return ColumnDict
 
 
+## Maps a label to the description ##
 def DescrToLabel(description):
 	for item in description.lower().split():
-		label = inv_dict.get(item)		#####To fix:Checking for exact match. should check for exact match, if not exact match, then check for key in string
+		label = inv_dict.get(item)																# Checking for exact match
+		if label == None:																		# if not exact match, then checking for key in string
+			for synonym in inv_dict:
+				if synonym in item:
+					label = inv_dict[synonym]
 		if label:
 			break
 	if not label:
@@ -174,7 +180,7 @@ def writeDeviceInfo(egauge_name, metadatalist, sortbylabel, labellist):
 		orig_dir = os.getcwd()																	# Returns current directory (2015 folder in this case)
 		clean_egauge = egauge_name.replace(".csv", "")
 		for line in reader:
-			for columnnumber, metadata in metadatadict.items():
+			for columnnumber, metadata in metadatadict.items():									# Writes data to file
 				f = metadata[2]
 				if metadata[3]:
 					jsond_MetaData = json.dumps(metadata[0].__dict__)
@@ -196,8 +202,8 @@ def writeDeviceInfo(egauge_name, metadatalist, sortbylabel, labellist):
 
 ####Following are contents of Main function####
 def Main():
-	args = ParsArgs.parseArgs(sys.argv)
-	sortbylabel = args.sort == "label"
+	args = ParsArgs.parseArgs(sys.argv)															# Accesses command-line arguments
+	sortbylabel = args.sort == "label"															# Assigns value to sortbylabel
 	Array = next(os.walk("sample_data"))[2]
 	
 
